@@ -10,6 +10,9 @@ ENV PATH=${NPM_GLOBAL}/bin:${PATH}
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
+    curl \
+    ca-certificates \
+    bubblewrap \
     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/*
