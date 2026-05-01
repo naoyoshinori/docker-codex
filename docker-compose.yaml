@@ -1,0 +1,9 @@
+services:
+  codex:
+    image: naoyoshinori/codex:0-node
+    working_dir: /workspace
+    volumes:
+      - ~/.gitconfig:/home/node/.gitconfig
+      - ~/.codex_cli:/home/node/.codex:cached
+      - .:/workspace:cached
+    command: ["sleep", "infinity"]
