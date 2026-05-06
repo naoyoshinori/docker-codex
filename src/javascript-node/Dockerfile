@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     ca-certificates \
     bubblewrap \
+    ripgrep \
+    jq \
+    tree \
     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/*
